@@ -1,0 +1,96 @@
+import numpy as np
+
+print("=" * 60)
+print("1. Convert List to 1D Array")
+print("=" * 60)
+original_list = [12.23, 13.32, 100, 36.32]
+array_1d = np.array(original_list)
+print(f"Original List: {original_list}")
+print(f"One-dimensional NumPy array: {array_1d}")
+
+print("\n" + "=" * 60)
+print("2. Create 3x3 Matrix (2-10)")
+print("=" * 60)
+matrix_3x3 = np.arange(2, 11).reshape(3, 3)
+print(matrix_3x3)
+
+print("\n" + "=" * 60)
+print("3. Null Vector (10) & Update Sixth Value")
+print("=" * 60)
+null_vector = np.zeros(10)
+print(null_vector)
+print("Update sixth value to 11")
+null_vector[5] = 11  # Index 5 is the 6th element (0-indexed)
+print(null_vector)
+
+print("\n" + "=" * 60)
+print("4. Array from 12 to 38")
+print("=" * 60)
+array_12_38 = np.arange(12, 38)
+print(array_12_38)
+
+print("\n" + "=" * 60)
+print("5. Convert Array to Float Type")
+print("=" * 60)
+print("Original array")
+int_array = [1, 2, 3, 4]
+print(int_array)
+float_array = np.array(int_array, dtype=float)
+print("Array converted to float type:")
+print(float_array)
+
+print("\n" + "=" * 60)
+print("6. Celsius to Fahrenheit Conversion")
+print("=" * 60)
+# Fahrenheit to Celsius
+fahrenheit = np.array([0, 12, 45.21, 34, 99.91, 32])
+celsius = (fahrenheit - 32) * 5/9
+print("Values in Fahrenheit degrees:")
+print(fahrenheit)
+print("Values in Celsius degrees:")
+print(np.round(celsius, 2))
+
+# Celsius to Fahrenheit
+celsius_values = np.array([-17.78, -11.11, 7.34, 1.11, 37.73, 0])
+fahrenheit_values = (celsius_values * 9/5) + 32
+print("\nValues in Celsius degrees:")
+print(celsius_values)
+print("Values in Fahrenheit degrees:")
+print(np.round(fahrenheit_values, 2))
+
+print("\n" + "=" * 60)
+print("7. Append Values to Array")
+print("=" * 60)
+original_array = np.array([10, 20, 30])
+print("Original array:")
+print(original_array)
+values_to_append = np.array([40, 50, 60, 70, 80, 90])
+appended_array = np.append(original_array, values_to_append)
+print("After append values to the end of the array:")
+print(appended_array)
+
+print("\n" + "=" * 60)
+print("8. Array Statistical Functions")
+print("=" * 60)
+random_array = np.random.rand(10)
+print("Random array:")
+print(random_array)
+print(f"Mean: {np.mean(random_array):.4f}")
+print(f"Median: {np.median(random_array):.4f}")
+print(f"Standard Deviation: {np.std(random_array):.4f}")
+
+print("\n" + "=" * 60)
+print("9. Find Min and Max")
+print("=" * 60)
+array_10x10 = np.random.rand(10, 10)
+print("10x10 array with random values:")
+print(array_10x10)
+print(f"\nMinimum value: {np.min(array_10x10):.4f}")
+print(f"Maximum value: {np.max(array_10x10):.4f}")
+
+print("\n" + "=" * 60)
+print("10. Create 3x3x3 Array")
+print("=" * 60)
+array_3x3x3 = np.random.rand(3, 3, 3)
+print("3x3x3 array with random values:")
+print(array_3x3x3)
